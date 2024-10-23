@@ -1,0 +1,383 @@
+/* styles.css */
+
+/* Estilo global */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  min-height: 100vh; /* Ocupa toda la altura de la ventana */
+  font-weight: 300;
+
+}
+
+h1, h2, h3, h4 {
+  font-weight: 300;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente los elementos dentro del contenedor */
+  align-items: center; /* Centra horizontalmente los elementos dentro del contenedor */
+  padding: 20px;
+  padding-bottom: 80px; /* Espacio para el footer */
+  flex: 1; /* Permite que el contenedor ocupe el espacio disponible */
+  font-weight: 300;
+}
+
+.customer {
+  margin-bottom: 35px !important;
+}
+
+.form-group {
+  z-index: 1;
+}
+
+/* Inputs y etiquetas */
+label {
+  display: flex; /* Usar flexbox para etiquetas */
+  align-items: center; /* Centrar verticalmente el texto y el checkbox */
+  margin-bottom: 10px; /* Espacio entre las etiquetas */
+  font-weight: 300;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  margin-right: 10px; /* Espacio entre el checkbox y el texto */
+  font-weight: 300;
+}
+
+/* Botón */
+button {
+  display: flex;
+  justify-content: center; /* Centra el texto del botón */
+  align-items: center; /* Asegura que el texto esté centrado verticalmente */
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s; /* Transición suave para hover */
+  position: relative; /* Permite usar z-index */
+  z-index: 10; /* Asegura que el botón esté por encima del footer */
+  margin-bottom: 50px; /* Espacio para evitar superposición con el footer */
+  font-weight: 300;
+  margin-top: 50px;
+}
+
+button:hover {
+  background-color: #45a049; /* Color del botón al pasar el mouse */
+}
+
+/* Footer */
+footer {
+  font-weight: 300;
+  background-color: #3333333b; /* Color de fondo */
+  color: black; /* Color del texto */
+  text-align: center;
+  padding: 10px 0;
+  position: fixed; /* Fijo en la parte inferior */
+  bottom: 0; /* Asegúrate de que esté en la parte inferior */
+  left: 0; /* Alineación completa */
+  right: 0; /* Alineación completa */
+  z-index: 1; /* Asegura que el footer esté por debajo del botón */
+  a, p {
+    display: inline-block;
+  }
+}
+
+/* Ícono de Instagram */
+.instagram-icon {
+  width: 30px; /* Ajusta el tamaño como desees */
+  height: auto;
+  margin-left: 5px; /* Espacio entre el texto y el icono */
+  vertical-align: middle; /* Alineación vertical */
+}
+
+
+.footer {
+  position: fixed;
+  bottom: -60px; /* Ocultar el footer inicialmente */
+  left: 0;
+  right: 0;
+  height: 50px; /* Altura del footer */
+  background-color: #fff; /* Fondo blanco o el color que prefieras */
+  transition: bottom 0.3s; /* Transición suave */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  z-index: 1;
+}
+
+.footer.show {
+  bottom: 0; /* Mostrar el footer cuando tenga la clase 'show' */
+}
+input[type="text"],
+select {
+  width: 100%; /* Ajusta el ancho a 100% del contenedor padre */
+  min-width: 300px;
+  max-width: 300px; /* Limita el ancho máximo si es necesario */
+  padding: 10px; /* Para un espaciado interno cómodo */
+  margin: 5px 0; /* Espaciado entre los elementos */
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+  font-weight: 300;
+}
+
+.button-disabled {
+  pointer-events: none;
+  background-color: gainsboro;
+}
+
+
+/* styles.css */
+
+/* Contenedor para el pedido */
+.order-summary {
+  margin-top: 20px; /* Espacio entre el formulario y el resumen del pedido */
+}
+
+/* Estilo para la lista de pedidos */
+.order-list {
+  list-style-type: none; /* Eliminar los puntos de la lista */
+  padding: 0; /* Sin padding */
+}
+
+/* Estilo para cada elemento de la lista */
+.order-list li {
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  justify-content: space-between; /* Espacio entre el texto y el botón de eliminar */
+  align-items: center; /* Alinear verticalmente */
+  margin-bottom: 10px; /* Espacio entre los ítems */
+}
+
+/* Centrar el botón de envío */
+.send-button-container {
+  display: flex;
+  justify-content: center; /* Centra el botón */
+  margin-top: 20px; /* Espacio adicional arriba del botón */
+}
+
+/* Estilo del botón de eliminar */
+.remove-button {
+  padding: 5px 10px;             /* Espaciado interno de los botones */
+  background-color: #b2e0b2;      /* Color de fondo verde pastel */
+  color: white;                   /* Color del texto del botón */
+  border: none;                   /* Sin borde */
+  border-radius: 5px;            /* Bordes redondeados */
+  cursor: pointer;                /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s; /* Transición suave para el hover */
+  margin: 0 5px;                 /* Margen horizontal entre botones */
+}
+
+
+input[type="text"],
+select {
+  width: 100%; /* Ajusta el ancho a 100% del contenedor padre */
+  min-width: 300px;
+  max-width: 400px; /* Establece un ancho máximo, ajusta según sea necesario */
+  padding: 10px; /* Espaciado interno para mejor apariencia */
+  margin: 5px 0; /* Espaciado vertical entre los elementos */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+/* Aumentar el ancho específicamente para los select e input dentro de los grupos de formulario */
+.form-group {
+  max-width: 450px; /* Establecer un ancho máximo para el grupo de formulario */
+  margin: 0 auto; /* Centrar el grupo de formulario */
+}
+
+/* Estilo para el contenedor del pedido */
+.order-summary {
+  margin-top: 20px; /* Espacio entre el formulario y el resumen del pedido */
+}
+
+/* Estilo para la lista de pedidos */
+.order-list {
+  list-style-type: none; /* Eliminar los puntos de la lista */
+  padding: 0; /* Sin padding */
+}
+
+/* Estilo para cada elemento de la lista */
+.order-list li {
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  justify-content: space-between; /* Espacio entre el texto y el botón de eliminar */
+  align-items: center; /* Alinear verticalmente */
+  margin-bottom: 10px; /* Espacio entre los ítems */
+}
+
+/* Centrar el botón de envío */
+.send-button-container {
+  display: flex;
+  justify-content: center; /* Centra el botón */
+  margin-top: 20px; /* Espacio adicional arriba del botón */
+}
+
+/* Estilo del botón de eliminar */
+.remove-button {
+  margin-left: 10px; /* Espacio entre el texto del pedido y el botón */
+}
+
+.shipping-address-container {
+  overflow: hidden; /* Oculta el contenido mientras la altura es 0 */
+  height: 0;
+  opacity: 0;
+  transition: height 0.5s ease, opacity 0.5s ease;
+}
+
+.shipping-address-container.show {
+  height: 100%;
+  opacity: 1;
+}
+
+
+/*Estilos modal*/
+
+/* El modal se oculta por defecto */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+}
+
+/* Mostrar el modal cuando se agrega la clase 'show' */
+.modal.show {
+  display: block; /* Mostrar cuando se agrega la clase 'show' */
+}
+
+/* Contenido del modal */
+/* Ajustar el tamaño del modal */
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px;  /* Ancho del modal */
+  height: 300px; /* Alto del modal */
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center; /* Centrar el contenido del modal */
+}
+
+/* Centrar el botón */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; /* Separación superior */
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Centrar el botón horizontalmente */
+.modal-content button {
+  display: block;
+  margin: 20px auto 0; /* Centrar automáticamente en horizontal */
+}
+
+/* Contenedor de cada categoría */
+/* Contenedor de cada categoría */
+h3 {
+  margin: 20px 0 10px; /* Margen para separación */
+}
+
+/* Estilos para cada ítem del menú */
+/* .menu-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+} */
+
+.menu-item {
+  width: 300px; /* Ajusta el ancho a lo que necesites */
+  margin: 10px auto; /* Centra el item y agrega margen */
+  padding: 15px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde opcional */
+  border-radius: 5px; /* Bordes redondeados opcionales */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+  display: flex; /* Flexbox para el contenido interno */
+  flex-direction: column; /* Apila elementos verticalmente */
+  align-items: stretch; /* Asegura que los elementos hijos usen el ancho completo */
+}
+
+/* Estilo del título del ítem */
+.menu-item h3 {
+  margin: 0;                      /* Sin márgenes para un diseño más compacto */
+}
+
+/* Estilo de la descripción del ítem */
+.menu-item-description {
+  margin: 5px 0;                  /* Margen para separación */
+  font-size: 0.9em;               /* Tamaño de fuente reducido */
+  color: #666;                    /* Color gris para la descripción */
+}
+
+/* Contenedor para los controles de cantidad */
+.quantity-controls {
+  display: flex;                  /* Utiliza Flexbox para alinear los botones y la cantidad */
+  align-items: center;           /* Alineación vertical centrada */
+  margin-top: 10px;              /* Margen superior para separación */
+  justify-content: flex-end;      /* Alinea los botones a la derecha */
+}
+
+/* Estilos para los botones */
+.quantity-controls button {
+  padding: 5px 10px;             /* Espaciado interno de los botones */
+  background-color: #b2e0b2;      /* Color de fondo verde pastel */
+  color: white;                   /* Color del texto del botón */
+  border: none;                   /* Sin borde */
+  border-radius: 5px;            /* Bordes redondeados */
+  cursor: pointer;                /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s; /* Transición suave para el hover */
+  margin: 0 5px;                 /* Margen horizontal entre botones */
+  z-index: auto;
+}
+
+.quantity-controls button:hover {
+  background-color: #98d8a8;     /* Color del botón al pasar el mouse (verde más oscuro) */
+}
+
+.quantity-controls span {
+  display: inline-block;          /* Para asegurarse de que el span se mantenga en línea */
+  width: 30px;                   /* Ancho fijo para el contador */
+  text-align: center;            /* Centra el texto dentro del span */
+}
+
+.address-input {
+  opacity: 0;                     /* Inicialmente oculto */
+  height: 0;                      /* Altura inicial para ocultar */
+  overflow: hidden;               /* Oculta el contenido que desborda */
+  transition: opacity 0.9s ease, height 0.9s ease; /* Transición suave */
+}
+
+/* Estilo cuando el input debe mostrarse */
+.address-input.show {
+  opacity: 1;                     /* Hace visible el input */
+  height: auto;                   /* Establece la altura automática para mostrar el contenido */
+  margin-top: 10px;              /* Espaciado superior opcional al mostrarse */
+}
+
+.address-input:not(.show) {
+  transition: opacity 0.9s ease, height 0.9s ease; /* Mantiene la transición al ocultar */
+  height: 0;                      /* Mantiene la altura en 0 */
+  margin-top: 0;                 /* Asegúrate de eliminar el margen superior al ocultar */
+}
